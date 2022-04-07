@@ -67,10 +67,7 @@ class AuthController extends Controller
 
     public function csrf(){
       $token = csrf_token();
-      return response()->json([
-        'csrf' => $token,
-        'hai' => 'hai'
-      ]);
+      return response()->json([ $token]);
     }
 
     /**

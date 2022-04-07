@@ -43,7 +43,7 @@ Route::get("pass", function() { return bcrypt('rakunTua'); });
 
 Route::group(['middleware' => 'web'], function() {
   Route::get('/csrf', function(Request $request) {
-    return response()->json(['token' => csrf_token()]); 
+    return response()->json([ csrf_token()]); 
   });
 });
 
